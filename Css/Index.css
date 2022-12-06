@@ -1,0 +1,64 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: inline-block;
+}
+
+.box:hover {
+  width: 400px;
+  height: 400px;
+}
+
+p {
+  color: aqua;
+}
+
+.box1 {
+  margin-top: 10em;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition-property: width, height;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+.box1:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.box2 {
+  margin-top: 10em;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition-property: width, height, background-color;
+  transition-duration: 1s, 4s, 3s;
+  /* rule(1) notice that each proerty will take different duratio and the way it is specified is according to the order you placed the properties  */
+  transition-timing-function: ease, ease-out, ease-in;
+  /* rule 1 applies here as well */
+  transition-delay: 1s, 0ms, 0.5s;
+  /* rule 1 also applies here */
+}
+
+.box2:hover {
+  width: 400px;
+  height: 400px;
+  background-color: cadetblue;
+}
+
+.box3 {
+  margin-top: 10em;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition: width 1s ease, height 2s ease, background-color 1s ease 1s;
+  /* we can also use the short hand rule */
+}
+.box3:hover {
+  width: 400px;
+  height: 400px;
+  background-color: blueviolet;
+}
