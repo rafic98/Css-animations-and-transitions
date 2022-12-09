@@ -1,0 +1,111 @@
+@keyframes moveround {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes multistate_moveround {
+  0%,
+  100% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 100px;
+    top: 0;
+  }
+  50% {
+    left: 100px;
+    top: 20rem;
+  }
+  75% {
+    left: 0;
+    top: 20rem;
+  }
+}
+@keyframes colorful_boxcircle {
+  0%,
+  100% {
+    left: 0;
+    top: 0;
+    background-color: aqua;
+  }
+  25% {
+    left: 100px;
+    top: 0;
+    background-color: blue;
+  }
+  50% {
+    left: 100px;
+    top: 20rem;
+    background-color: blueviolet;
+    border-radius: 100%;
+  }
+  75% {
+    left: 0;
+    top: 20rem;
+    background-color: aquamarine;
+  }
+}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  animation-name: moveround;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+}
+.box2 {
+  margin-top: 2em;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  animation-name: moveround;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  /* this will cause the animation to osscilate */
+}
+
+.box3 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin-top: 2em;
+  position: relative;
+  animation-name: multistate_moveround;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+.box4 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin-top: 20rem;
+  position: relative;
+  animation-name: colorful_boxcircle;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.box5 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin-top: 20rem;
+  position: relative;
+  animation-name: moveround;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
